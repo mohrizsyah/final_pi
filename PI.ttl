@@ -1,0 +1,255 @@
+@prefix skos: 			<http://www.w3.org/2004/02/skos/core#> .
+@prefix konsep: 		<http://rizza.com/konsep#> .
+@prefix rdf: 			<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 			<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dimensi: 		<http://rizza.com/dimensi#> .
+@prefix qb: 			<http://purl.org/linked-data/cube#> .
+@prefix rizz: 			<http://rizza.com/datastatistik#> .
+@prefix vocab: 			<http://rizza.com/vocab> .
+@prefix kategori: 		<http://rizza.com/kategori#> .
+@prefix subkategori: 	<http://rizza.com/subkategori#> .
+@prefix xsd:      		<http://www.w3.org/2001/XMLSchema#> .
+@prefix gov: 			<http://rizza.com/gov#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure: 	<http://purl.org/linked-data/sdmx/2009/measure#> .
+
+vocab:kategori a rdfs:Class .
+vocab:subkategori a rdfs:Class .
+
+kategori:pemerintahan
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Pemenrintahan" ;
+	skos:inScheme konsep:Kategori .
+kategori:bencana
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Bencana" ;
+	skos:inScheme konsep:Kategori .
+kategori:event
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Event" ;
+	skos:inScheme konsep:Kategori .
+kategori:kriminalitas
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Kriminalitas" ;
+	skos:inScheme konsep:Kategori .
+kategori:lakalantas
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Lakalantas" ;
+	skos:inScheme konsep:Kategori .
+kategori:kebijakan
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Kebijakan" ;
+	skos:inScheme konsep:Kategori .
+kategori:prestasi
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Prestasi" ;
+	skos:inScheme konsep:Kategori .
+kategori:walgub
+	a skos:Concept, vocab:kategori ;
+	rdfs:label "Walikota & Gubernur" ;
+	skos:inScheme konsep:Kategori .
+	
+subkategori:kepemerintahan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Kegiatan Kepemrintahan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:kerakyatan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Kerakyatan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:banjir
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Banjir" ;
+	skos:inScheme konsep:subkategori .
+subkategori:kebakaran
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Kebakaran" ;
+	skos:inScheme konsep:subkategori .
+subkategori:musik
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Musik" ;
+	skos:inScheme konsep:subkategori .
+subkategori:acara
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Acara" ;
+	skos:inScheme konsep:subkategori .
+subkategori:pelatihan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Pelatihan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:pembunuhan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Pembunuhan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:pencurian
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Pencurian" ;
+	skos:inScheme konsep:subkategori .
+subkategori:korupsi
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Korupsi" ;
+	skos:inScheme konsep:subkategori .
+subkategori:pelanggaran
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Pelanggaran" ;
+	skos:inScheme konsep:subkategori .
+subkategori:kecelakaan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Kecelakaan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:peraturan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Peraturan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:konstitusi
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Konstitusi" ;
+	skos:inScheme konsep:subkategori .
+subkategori:juara
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Juara" ;
+	skos:inScheme konsep:subkategori .
+subkategori:penghargaan
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Penghargaan" ;
+	skos:inScheme konsep:subkategori .
+subkategori:ahok
+	a skos:Concept, vocab:subkategori ;
+	rdfs:label "Ahok" ;
+	skos:inScheme konsep:subkategori .
+
+konsep:kategori a skos:ConceptScheme ;
+	rdfs:label "Kategori" ;
+	skos:hasTopConcept kategori:pemerintahan, kategori:bencana, kategori:event, kategori:kriminalitas, kategori:lakalantas, kategori:kebijakan, kategori:prestasi, kategori:walgub;
+	skos:notation "kategori" .	
+konsep:subkategori a skos:ConceptScheme ;
+	rdfs:label "Subkategori" ;
+	skos:hasTopConcept subkategori:kepemerintahan, subkategori:kerakyatan, subkategori:banjir, subkategori:kebakaran, subkategori:musik, subkategori:acara, subkategori:pelatihan, subkategori:pembunuhan, subkategori:pencurian, subkategori:korupsi, subkategori:pelanggaran, subkategori:kecelakaan, subkategori:peraturan, subkategori:konstitusi, subkategori:juara, subkategori:penghargaan, subkategori:ahok;
+	skos:notation "subkategori" .
+
+dimensi:kategori
+	qb:CodeList konsep:kategori ;
+	a rdfs:Property, qb:DimensionProperty ;
+	rdfs:range skos:Concept .
+dimensi:subkategori
+	qb:CodeList konsep:subkategori ;
+	a rdfs:Property, qb:DimensionProperty ;
+	rdfs:range skos:Concept .
+
+rizz:jmlh_posting a rdf:Property, qb:MeasureProperty ;
+	rdfs:label "Jumlah Posting";
+	rdfs:range xsd:integer .
+	
+rizz:dataselebpost a qb:DataStructureDefinition;
+    # The dimensions
+    qb:component 	[ qb:dimension dimensi:kategori],
+					[ qb:dimension dimensi:subkategori],
+					[ qb:measure rizz:jmlh_posting] .
+
+rizz:datasetGov 
+	a qb:DataSet;
+    rdfs:label "DataDkiJakarta";
+    qb:structure rizz:datasetGov .  
+
+rizz:data_1 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:pemerintahan ;
+	dimensi:subkategori subkategori:kepemerintahan ;
+	rizz:jmlh_posting 79 .
+
+rizz:data_2 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:pemerintahan ;
+	dimensi:subkategori subkategori:kerakyatan ;
+	rizz:jmlh_posting 36 .
+
+rizz:data_3 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:bencana ;
+	dimensi:subkategori subkategori:banjir ;
+	rizz:jmlh_posting 172 .
+
+rizz:data_4 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:bencana ;
+	dimensi:subkategori subkategori:kebakaran ;
+	rizz:jmlh_posting 15 .
+
+rizz:data_5 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:event ;
+	dimensi:subkategori subkategori:musik ;
+	rizz:jmlh_posting 23 .
+	
+rizz:data_6 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:event ;
+	dimensi:subkategori subkategori:acara ;
+	rizz:jmlh_posting 351 .
+
+rizz:data_7 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:event ;
+	dimensi:subkategori subkategori:pelatihan ;
+	rizz:jmlh_posting 25 .
+
+rizz:data_8 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:kriminalitas ;
+	dimensi:subkategori subkategori:pembunuhan ;
+	rizz:jmlh_posting 105 .
+
+rizz:data_9 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:kriminalitas ;
+	dimensi:subkategori subkategori:pencurian ;
+	rizz:jmlh_posting 0 .
+	
+rizz:data_10 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:kriminalitas ;
+	dimensi:subkategori subkategori:korupsi ;
+	rizz:jmlh_posting 50 .
+
+rizz:data_11 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:lakalantas ;
+	dimensi:subkategori subkategori:pelanggaran ;
+	rizz:jmlh_posting 47 .	
+	
+rizz:data_12 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:lakalantas ;
+	dimensi:subkategori subkategori:kecelakaan ;
+	rizz:jmlh_posting 2 .	
+	
+rizz:data_13 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:kebijakan ;
+	dimensi:subkategori subkategori:peraturan ;
+	rizz:jmlh_posting 21 .
+
+rizz:data_14 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:kebijakan ;
+	dimensi:subkategori subkategori:konstitusi ;
+	rizz:jmlh_posting 0 .
+
+rizz:data_15 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:prestasi ;
+	dimensi:subkategori subkategori:juara ;
+	rizz:jmlh_posting 75 .
+
+rizz:data_16 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:prestasi ;
+	dimensi:subkategori subkategori:penghargaan ;
+	rizz:jmlh_posting 9 .	
+	
+rizz:data_17 a qb:Observation ;
+	qb:dataSet rizz:datasetGov ;
+	dimensi:kategori kategori:walgub ;
+	dimensi:subkategori subkategori:ahok ;
+	rizz:jmlh_posting 126 .
